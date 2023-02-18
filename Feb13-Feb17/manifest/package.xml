@@ -1,0 +1,62 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <version>56.0</version>
+    <types>
+         <!-- Retrieves the lead and case assignment rules named MyRule. Replace these with your custom rule names -->    
+        <members>Case.WebAssign</members>
+        <name>AssignmentRule</name>
+    </types>
+     <types>
+        <!-- Retrieves the lead and case auto-response rules named MyRule. Replace these with your custom rule names -->    
+        <members>Case.Acknowledgement</members>
+        <name>AutoResponseRule</name> 
+    </types>
+    <types>
+        <members>LeadPath</members>
+        <name>PathAssistant</name>
+    </types>
+    <types>
+        <members>Case.VIP Process</members>
+        <name>BusinessProcess</name>
+    </types>
+    <types>
+        <members>Case.VIP</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <!-- 
+            Retrieves all custom objects and their custom fields.
+            NOTE: The CustomObject metadata type will also include the following:
+            - Record Types
+            - List Views
+            - OWDs
+            - Validation Rules
+            - Compact Layouts
+            - Much more
+        -->
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <!-- 
+            Retrieves the CustomProfile profile. DO NOT RETRIEVE ALL, replace with your custom profiles.
+            Make sure to pull any objects you want to have the permissions for 
+        -->
+        <members>Teacher</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <!-- Retrieves all permission sets. Make sure to pull any objects you want to have the permissions for -->
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <!-- Retrieves all permission set groups defined. Make sure to pull the permission sets in them -->
+        <members>*</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <types>
+        <members>Org</members>
+        <name>Settings</name>
+    </types>
+</Package>
