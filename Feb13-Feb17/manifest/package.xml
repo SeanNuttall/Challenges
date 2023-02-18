@@ -23,4 +23,40 @@
         <members>Case.VIP</members>
         <name>RecordType</name>
     </types>
+    <types>
+        <!-- 
+            Retrieves all custom objects and their custom fields.
+            NOTE: The CustomObject metadata type will also include the following:
+            - Record Types
+            - List Views
+            - OWDs
+            - Validation Rules
+            - Compact Layouts
+            - Much more
+        -->
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <!-- 
+            Retrieves the CustomProfile profile. DO NOT RETRIEVE ALL, replace with your custom profiles.
+            Make sure to pull any objects you want to have the permissions for 
+        -->
+        <members>Teacher</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <!-- Retrieves all permission sets. Make sure to pull any objects you want to have the permissions for -->
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <!-- Retrieves all permission set groups defined. Make sure to pull the permission sets in them -->
+        <members>*</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <types>
+        <members>Org</members>
+        <name>Settings</name>
+    </types>
 </Package>
