@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <version>56.0</version>
+    <types>
+        <members>Vehicle</members>
+        <members>Car</members>
+        <members>DML</members>
+        <members>DataLord</members>
+        <members>SOSLChallenges</members>
+        <members>Calculator</members>
+        <members>OrderHelper</members>
+        <members>ContactHelper</members>
+        <members>AccountHelper</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ContactTrigger</members>
+        <members>AccountTrigger</members>
+        <members>OrderTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+</Package>
