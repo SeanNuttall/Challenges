@@ -20,8 +20,10 @@ public class DataLord {
         return [SELECT Name FROM Opportunity WHERE Amount > 100000 ORDER BY CloseDate DESC LIMIT 1];
     }
     
+    public List<sObject> MajorPlayers(){
+        return [SELECT Name FROM Contact WHERE Account.Rating LIKE 'Hot']
+    }
     public List<sObject> MostPopularAccount(){
-       	List<sObject> acc = [SELECT Account.Name FROM Contact GROUP BY Account.Name ORDER BY COUNT(Name) DESC LIMIT 1];
-        return acc;
+       	return [SELECT Account.Name FROM Contact GROUP BY Account.Name ORDER BY COUNT(Name) DESC LIMIT 1];
     }
 }
