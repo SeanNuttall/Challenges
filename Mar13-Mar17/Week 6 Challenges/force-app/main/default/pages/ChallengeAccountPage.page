@@ -1,0 +1,29 @@
+<!-- Challenges 1, 2, 3, 4, 6 -->
+
+<apex:page Controller="ChallengeAccountController">
+	<apex:stylesheet value="Account"/>
+    <apex:form >
+        <apex:pageBlock title="Greetings!">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!Greeting}" value="Say Hello"/>
+                <p>
+                    {!Greet}
+                </p>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+	</apex:form>
+    <apex:pageBlock title="About Me">
+        <apex:pageBlockSection title="This Account Doesn't Change!">
+			<apex:pageBlockTable value="{! Account}" var="acc">
+            	<apex:column value="{! acc.Name }"/>
+                <apex:column value="{! acc.Type }"/>
+                <apex:column value="{! acc.AnnualRevenue }"/>
+                <apex:column value="{! acc.Rating }"/>
+                <apex:column value="{! acc.Id }"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="About Me">
+            {!$Label.AboutMe}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
