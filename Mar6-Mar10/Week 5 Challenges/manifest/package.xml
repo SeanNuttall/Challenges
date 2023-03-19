@@ -2,21 +2,15 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <version>56.0</version>
     <types>
-        <members>Vehicle</members>
-        <members>Car</members>
-        <members>DML</members>
-        <members>DataLord</members>
-        <members>SOSLChallenges</members>
-        <members>Calculator</members>
-        <members>OrderHelper</members>
-        <members>ContactHelper</members>
-        <members>AccountHelper</members>
+        <members>ChallengeAccountController</members>
+        <members>ChallengeUserInputExtension</members>
+        <members>AccountsAndContactsController</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>ContactTrigger</members>
-        <members>AccountTrigger</members>
-        <members>OrderTrigger</members>
-        <name>ApexTrigger</name>
+        <members>ChallengeAccountPage</members>
+        <members>ChallengeUserInput</members>
+        <members>AccountsAndContacts</members>
+        <name>ApexPage</name>
     </types>
 </Package>

@@ -1,0 +1,30 @@
+<!-- Challenges 9, 11, 12 -->
+
+<apex:page Controller="AccountsAndContactsController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:actionRegion >
+                    <apex:inputText value="{!SearchTerm}" > 
+                        <apex:actionSupport event="onchange" reRender="AccountTable" />
+                    </apex:inputText>
+                </apex:actionRegion>
+            </apex:pageBlockSection>
+            <apex:outputPanel id="AccountTable">
+                <apex:pageBlockTable title="TableOfAccounts" value="{!FilteredAccounts}" var="Account">
+                    <apex:column >
+                        <apex:outputField value="{!Account.Name}">
+                            <apex:inlineEditSupport />
+                        </apex:outputField>
+                    </apex:column>
+                    <apex:column >
+                        <apex:repeat value="{!Account.Contacts}" var="Contact"  >
+                            <apex:outputField value="{!Contact.Name}" />
+                            <apex:outputText value=", "/>
+                        </apex:repeat>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

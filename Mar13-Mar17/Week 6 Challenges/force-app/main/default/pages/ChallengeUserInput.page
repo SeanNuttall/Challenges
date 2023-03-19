@@ -1,0 +1,30 @@
+<!-- Challenges 7, 8, 13, 14
+  Quick note about 13... I didn't use your syntax because it already didn't display the details until after you input an account name
+	I get if that's not worth points, I may have missed the point
+-->     
+
+<apex:page standardController="Account" recordSetVar="allAccounts" extensions="ChallengeUserInputExtension">
+    <apex:form >
+        <apex:pageBlock title="Select an Account" tabStyle="Account">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!SubmitAccount}" value="Continue" />
+            </apex:pageBlockButtons>
+            <p>
+                Desired Account:
+            </p>
+            <apex:selectList value="{!chosenAcc}" size="1" >
+                <apex:selectOptions value="{!accountChoices}" />
+            </apex:selectList>
+        </apex:pageBlock>
+   </apex:form>
+    <apex:pageBlock title="Account Details">
+    <apex:pageBlockSection >
+        <apex:detail subject="{!acc.id}" relatedList="false" />
+        <p>
+            <apex:repeat value="{!Contacts}" var="Contact">
+                <apex:outputText value="{!Contact}" />
+            </apex:repeat>
+        </p>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>
